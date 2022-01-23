@@ -5,6 +5,12 @@ This project uses Arduino Uno, ESP8266 board, HC-SR04 ultrasonic sensor and a jo
 
 Load hue_controller_esp8266.ino to the memory of your esp8266 and hue_controller_UNO.ino to the memory of your Arduino UNO.
 
+Used libraries:
+<NewPing.h> https://www.arduino.cc/reference/en/libraries/newping/
+<ESP8266HTTPClient.h> https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient
+<ESP8266WiFi.h> https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi
+
+
 You will have to modify 5 parameters in the file hue_controller_esp8266 to use it. These are ip, (IP of your HUE gateway), user_name (your Hue api user, you can create one with these instructions https://developers.meethue.com/develop/get-started-2/), ssid (your wifi network name in string format, e.g. "My WIFI"), password (your wifi password) and lamps (the id:s of the lamps you want to use, you can find the id:s with the information in the webpage linked previously.
 
 The physical wire connections can be made differenty, but then you will have to modify the code. I have a board with Arduino Uno and ESP8266 combined, but you can connect them with RX and TX pins. My other connections are as follows: 
@@ -21,6 +27,7 @@ GND - Arduino ground
 Vcc - Arduino 5V
 Trig - Arduino D12
 Echo - Arduino D11
+
 
 Usage:
 
